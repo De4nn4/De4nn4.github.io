@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --co101: #F5F1E2;
+    --co102: #6B704E;
+    --co103: #BB6133;
+    --co104: #4C482F;
+    --co105: #FAF8F0;
+}
+
+body {
+  background-color: var(--co101);
+}
+
+.header {
+    overflow: hidden;
+    padding: 25px 25px;
+  }
+  
+  /* Style the header links */
+.header a {
+  float: left;
+  color: var(--co104);
+  text-align: center;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  padding: 20px;
+  padding-bottom: 10px;
+  text-decoration: none;
+  font-size: 18px;
+}
+  
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+  
+.header a:hover {
+  color: var(--co103);
+}
+    
+  /* Float the link section to the right */
+.header-right {
+  float: right;
+}
+  
+  /* Add media queries for responsiveness - when the screen is 500px wide or less, stack the links on top of each other */
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .header-right {
+    float: none;
+  }
+}
+
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  justify-content: space-around;
+  padding: 25px 25px;
+  background-color: var(--co104);
+}
+
+.copyright_text {
+  float: left;
+  color: var(--co105);
+  text-align: center;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.icon {
+  width: 5%;
+  height: auto;
+  float: right;
+}
+
+/* Use this code https://get.foundation/building-blocks/blocks/social-footer.html */
