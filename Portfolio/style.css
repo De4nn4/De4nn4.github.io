@@ -1,3 +1,4 @@
+/* Essential */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -13,13 +14,18 @@
 
 body {
   background-color: var(--co101);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .content {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
+  flex: 1;
 }
 
+/* Header */
 .icon_header {
   display: flex;
   justify-content: center;
@@ -35,41 +41,307 @@ body {
   height: auto;
 }
 
-.header {
+.title {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom:  15px;
+}
+
+h1 {
+  color: var(--co103);
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+h3 {
+  color: var(--co102);
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+}
+
+.links {
   overflow: hidden;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 25px 25px;
 }
 
-.header a {
+.links a {
   color: var(--co104);
   text-align: center;
   font-family: "Libre Baskerville", serif;
   font-weight: 700;
   padding: 20px;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 20px;
 }
 
-.header a:hover {
+.links a:hover {
 color: var(--co103);
 }
 
+.line{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+hr {
+  width: 65%;
+  border: 5rem soild;
+  border-color: var(--co102);
+}
+
+/* Image Carousel */
+.header {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.carousel {
+  margin: 20px;
+  margin-bottom: 70px;
+  margin-top: 0;
+}
+
+.carousel-cell {
+  margin-right: 10px;
+}
+
+.carousel-cell img {
+  display: block;
+  height: 480px;
+}
+
+@media screen and ( min-width: 768px ) {
+  .carousel img {
+    height: 480px;
+  }
+}
+
+.flickity-prev-next-button {
+  width: 100px;
+  height: 100px;
+  background: transparent;
+}
+
+.flickity-prev-next-button .arrow {
+  fill: var(--co102);
+}
+.flickity-prev-next-button.no-svg {
+  color: var(--co102);
+}
+.flickity-prev-next-button:hover {
+  background: transparent;
+}
+
+.flickity-page-dots {
+  bottom: 0px;
+}
+
+.flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background-color: transparent;
+}
+
+.flickity-page-dots .dot.is-selected {
+  background: var(--co103);
+}
+
+/* Project */
+.FilterSection{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.FilterButton{
+  display: flex;
+  flex-direction: row;
+  color: var(--col-04);
+  background-color: var(--col-01);
+  font-family: 'Oxygen', sans-serif;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.FilterButton:Hover{
+  color: var(--col-14);
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.RecipeBox{
+  width: 32%;
+  height: auto;
+  margin-bottom: 28px;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* About */
+.about {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 10px;
+}
+
+.about_text {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  color: var(--co102);
+  padding: 10px;
+}
+
+h2 {
+  color: var(--co103);
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-size: 35px;
+  margin-bottom: 2%;
+}
+
+p {
+  color: var(--co104);
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.portrait {
+  display: flex;
+  width: 40%;
+}
+
+.portrait img {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  padding-right: 30px;
+}
+
+/* about page*/
+.link_to_contract a {
+  color: var(--co104);
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.3;
+  text-decoration: none;
+}
+
+.link_to_contract a:hover {
+  color: var(--co103);
+}
+
+/* contact */
+.contact {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  margin: 10px;
+}
+
+.contact a {
+  color: var(--co102);
+  font-family: "Nanum Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  color: var(--co103);
+}
+
+.social_link_c {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 5%;
+}
+
+.social_link_c img {
+  width: 70px;
+  height: 70px;
+  margin: 0 20px;
+}
 
 
-
-
-
-
+/* footer */
 footer {
   display: flex;
   flex-wrap: wrap-reverse;
   overflow: hidden;
   justify-content: space-around;
-  padding: 25px 25px;
-  background-color: var(--co104);
+  background-color: var(--co102);
 }
 
 .copyright_b {
@@ -88,11 +360,20 @@ footer {
   margin-top: 5%;
 }
 
+.copyright_text a {
+  color: var(--co101);
+  text-decoration: none;
+}
+  
+.copyright_text a:hover {
+  color: var(--co103);
+}
+
 .social_link_b {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 2%;
-    margin-bottom: 2%;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 2%;
+  margin-bottom: 2%;
 }
 
 .social_link_b img {
@@ -101,34 +382,6 @@ footer {
   margin: 0 10px;
 }
 
-
 /* Use this code https://get.foundation/building-blocks/blocks/social-footer.html */
-
-
-.carousel {
-  margin: 20px;
-  margin-bottom: 50px;
-}
-
-.carousel-cell {
-  width: 50%;
-  height: 500px;
-  margin-right: 10px;
-  background: #8C8;
-  border-radius: 5px;
-  counter-increment: carousel-cell;
-}
-
-/* cell number */
-.carousel-cell:before {
-  display: block;
-  text-align: center;
-  content: counter(carousel-cell);
-  line-height: 200px;
-  font-size: 80px;
-  color: white;
-}
-
-
 
 

@@ -7,29 +7,102 @@
         <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+        <script src="script.js" defer></script>
 
         <link rel="iconForTab" href="">
 
-        <title>Projects</title>
-
-        <script src="script.js" defer></script>
+        <title>Deanna Mierisch</title>
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Lexend&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
 
     </head>
 
     <body>
         <div class="content">
-            <header class="header">
+            <header class="links">
                 <a href="index.html">Deanna Mierisch</a>
                 <a href="project.html">Projects</a>
                 <a href="about.html">About</a>
                 <a href="contact.html">Contact</a>
             </header>
 
+            <div class="line">
+                <hr>
+            </div>
 
+            <div class="FilterSection">     
+                <button class="FilterButton" onclick='filterCategory("A", this)'>All</button>
+                <button class="FilterButton" onclick='filterCategory("MG", this)'>Motion Graphics</button>
+                <button class="FilterButton" onclick='filterCategory("F", this)'>Films</button>
+            </div>
+        
+            <section>
+              <div class="RecipeBox A F">
+                <div class="container">
+                  <img src="img/human_input.PNG" alt="Human Input Image and Link" class="image">
+                  <div class="overlay">
+                    <a href="Human _Input.html">
+                        <div class="text">Human Input</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="RecipeBox A MG">
+                <div class="container">
+                    <img src="img/uninhabited_body.PNG" alt="Uninhabited Body Image and Link" class="image">
+                  <div class="overlay">
+                    <a href="#">
+                        <div class="text">Uninhabited Body</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="RecipeBox A F">
+                <div class="container">
+                    <img src="img/Atmosphere.PNG" alt="Atmosphere Image and Link" class="image">
+                  <div class="overlay">
+                    <a href="#">
+                        <div class="text">Atmosphere</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="RecipeBox A MG">
+                <div class="container">
+                    <img src="img/return_scout.PNG" alt="Return Scout Image and Link" class="image">
+                  <div class="overlay">
+                    <a href="#">
+                        <div class="text">Return Scout</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+        
+              <div class="RecipeBox A MG">
+                <div class="container">
+                    <img src="img/fake_ad.PNG" alt="Fake Ad Image and Link" class="image">
+                  <div class="overlay">
+                    <a href="#">
+                        <div class="text">Fake Ad</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
         </div>
         <footer>
             <div class="copyright_b">   
-                <p class="copyright_text">Copyright &copy; 2024 | Deanna Mierisch</p>
+                <p class="copyright_text"> <a href="https://github.com/De4nn4/De4nn4.github.io/tree/main/Portfolio">Code</a> By Deanna Mierisch | 2024</p>
             </div>
             <div class="social_link_b">
                 <a href="https://www.linkedin.com/in/de4nn4-m1er1sch">
