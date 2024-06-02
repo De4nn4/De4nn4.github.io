@@ -6,6 +6,11 @@ var flkty = new Flickity( elem, {
   wrapAround: true
 });
 
+/* Button colour */
+function changeColor(button) {
+  button.style.color = "#4C482F";
+}
+
 /* list for project */
 function filterCategory(filterBy, buttonClicked){
   let itemsToFilter = Array.from(document.getElementsByClassName("RecipeBox"));
