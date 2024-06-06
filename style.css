@@ -516,6 +516,10 @@ footer {
   background-color: var(--co102);
 }
 
+.footer_none {
+  display: none;
+}
+
 .copyright_b {
   text-align: center;
   margin-top: 2%;
@@ -716,11 +720,19 @@ footer {
   }
 
 /* M-footer */
-  footer {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  .footer_none {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    overflow: hidden;
+    justify-content: space-around;
+    background-color: var(--co102);
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 
+  footer {
+    display: none;
+  }
 }
 
 /* Tablets */
@@ -857,11 +869,19 @@ section {
 }
 
 /* T-footer */
-footer {
-padding-top: 15px;
-padding-bottom: 15px;
-}
+  .footer_none {
+    display: flex;
+    flex-wrap: wrap-reverse;
+    overflow: hidden;
+    justify-content: space-around;
+    background-color: var(--co102);
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
 
+  footer {
+    display: none;
+}
 }
 
 /* Animation */
